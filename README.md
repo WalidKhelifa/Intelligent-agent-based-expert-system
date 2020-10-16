@@ -1,5 +1,5 @@
 # Intelligent agent based expert system implemented in Java
-
+##                             Setup
 * Télécharger [Netbeans](https://netbeans.org/downloads/8.2/rc/).    
 * Télécharger [SceneBuiler](https://gluonhq.com/products/scene-builder/).    
 * Télécharger [Mamp(Mac) ou Wamp(Windows)](https://www.mamp.info/fr/downloads/) pour gèrer la Base de donées.  
