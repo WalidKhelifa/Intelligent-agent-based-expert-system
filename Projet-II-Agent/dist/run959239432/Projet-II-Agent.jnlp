@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Projet-II-Agent.jnlp">
+  <information>
+    <title>Projet-II-Agent</title>
+    <vendor>itashi_</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Projet-II-Agent.jar" size="21530020" download="eager" />
+    <jar href="lib/jade-4.2.jar" size="2654282" download="eager" />
+    <jar href="lib/jfoenix-8.0.8.jar" size="2708772" download="eager" />
+    <jar href="lib/mysql-connector-java-8.0.19.jar" size="2356711" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Projet-II-Agent" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="projet.complet.agent.Main"  name="Projet-II-Agent" />
+  <update check="always"/>
+</jnlp>

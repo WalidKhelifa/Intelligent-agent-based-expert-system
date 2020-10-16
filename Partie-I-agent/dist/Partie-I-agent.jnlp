@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Partie-I-agent.jnlp">
+  <information>
+    <title>Partie-I-agent</title>
+    <vendor>itashi_</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Partie-I-agent.jar" size="21510679" download="eager" />
+    <jar href="lib/com.mysql.jdbc_5.1.5.jar" size="676712" download="eager" />
+    <jar href="lib/jade-4.2.jar" size="2654282" download="eager" />
+    <jar href="lib/jfoenix-8.0.8.jar" size="2708772" download="eager" />
+    <jar href="lib/mysql-connector-java-8.0.19.jar" size="2356711" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Partie-I-agent" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="PartieIAgents.Main"  name="Partie-I-agent" />
+  <update check="always"/>
+</jnlp>

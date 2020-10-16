@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="900.0" prefWidth="1440.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projet.complet.agent.AcheteurController">
+   <children>
+      <Pane prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43; -fx-background-radius: 5;">
+         <children>
+            <AnchorPane layoutY="-2.0" prefHeight="900.0" prefWidth="338.0" style="-fx-background-color: #393351;">
+               <children>
+                  <VBox layoutY="387.0" prefHeight="211.0" prefWidth="336.0">
+                     <children>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Commander" prefHeight="71.0" prefWidth="366.0" stylesheets="@acheteur.css" text="Lancer une commande" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#AfficherResultat" prefHeight="71.0" prefWidth="366.0" stylesheets="@acheteur.css" text="Visionner la liste des vendeurs" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                        <Button alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#Deconnecter" prefHeight="71.0" prefWidth="366.0" stylesheets="@acheteur.css" text="Déconnexion" textFill="WHITE">
+                           <graphic>
+                              <ImageView fitHeight="31.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true" />
+                           </graphic>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <Pane layoutY="274.0" prefHeight="77.0" prefWidth="336.0" style="-fx-background-color: #ffc700; -fx-background-radius: 5;">
+                     <children>
+                        <Label layoutX="120.0" layoutY="27.0" prefHeight="23.0" prefWidth="117.0" text="Acheteur">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+                  <ImageView fitHeight="37.0" fitWidth="33.0" layoutX="169.0" layoutY="203.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/iconfinder_Cute%20Ball%20-%20Go_32133_1.png" />
+                     </image></ImageView>
+                  <Label layoutX="107.0" layoutY="205.0" prefHeight="29.0" prefWidth="65.0" text="Online" textFill="#72ff36eb">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="129.0" fitWidth="134.0" layoutX="95.0" layoutY="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../images/1018_-_Add_User-512.png" />
+                     </image></ImageView>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ap_home" layoutX="337.0" layoutY="-1.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43;">
+               <children>
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="320.0" prefWidth="545.0" rotate="41.6" style="-fx-background-color: #ffc700; -fx-background-radius: 70;" />
+                  <Label layoutX="157.0" layoutY="232.0" prefHeight="407.0" prefWidth="1032.0" text="Interface Acheteur" textFill="WHITE">
+                     <font>
+                        <Font size="96.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" />
+                  <JFXButton layoutX="1006.0" layoutY="93.0" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="ap_afficherListeVendeur" layoutX="336.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43;">
+               <children>
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" />
+                  <JFXButton layoutX="1006.0" layoutY="93.0" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="296.0" prefWidth="466.0" rotate="41.6" style="-fx-background-color: #ffc700; -fx-background-radius: 70;" />
+                  <Label layoutX="386.0" layoutY="255.0" text="Liste des vendeurs" textFill="WHITE">
+                     <font>
+                        <Font size="26.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="table" layoutX="260.0" layoutY="308.0" prefHeight="389.0" prefWidth="518.0" stylesheets="@acheteur.css">
+                    <columns>
+                      <TableColumn fx:id="nomVendeur" prefWidth="165.0" text="Nom de vendeur" />
+                      <TableColumn fx:id="nomProduit" prefWidth="157.0" text="Nom de produit" />
+                        <TableColumn fx:id="nombreProduitDispo" prefWidth="194.0" text="Nombre de modele disponible" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <Pane fx:id="ap_commander" layoutX="336.0" prefHeight="900.0" prefWidth="1440.0" style="-fx-background-color: #2f2b43 #2f2b43;">
+               <children>
+                  <Pane layoutX="-25.0" layoutY="-178.0" prefHeight="231.0" prefWidth="461.0" rotate="41.6" style="-fx-background-color: #ffc700#ffc700; -fx-background-radius: 70;" />
+                  <Label id="l1" layoutX="81.0" layoutY="237.0" prefHeight="40.0" prefWidth="240.0" text="Marque" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="l2" layoutX="81.0" layoutY="523.0" prefHeight="40.0" prefWidth="278.0" text="Mémoire interne" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="l3" layoutX="81.0" layoutY="295.0" prefHeight="40.0" prefWidth="258.0" text="Version" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="l4" layoutX="81.0" layoutY="353.0" prefHeight="40.0" prefWidth="240.0" text="Taille d'écran" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="l5" layoutX="81.0" layoutY="466.0" prefHeight="40.0" prefWidth="249.0" text="Mémoire vive (RAM)" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="l6" layoutX="81.0" layoutY="409.0" prefHeight="40.0" prefWidth="240.0" text="Technologie" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXButton id="btnmodify" layoutX="81.0" layoutY="709.0" onAction="#rechercher" prefHeight="40.0" prefWidth="135.0" style="-fx-background-radius: 10; -fx-background-color: #ffc700;" text="Rechercher" />
+                  <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="1006.0" layoutY="93.0" pickOnBounds="true" preserveRatio="true" />
+                  <JFXButton layoutX="1006.0" layoutY="85.0" prefHeight="65.0" prefWidth="65.0" ripplerFill="#393351" text="Home" textFill="TRANSPARENT" />
+                  <Label id="l2" fx:id="l22" layoutX="81.0" layoutY="583.0" prefHeight="40.0" prefWidth="249.0" text="Batterie" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="l2" fx:id="l23" layoutX="81.0" layoutY="636.0" prefHeight="40.0" prefWidth="249.0" text="Prix" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <Label id="l1" layoutX="81.0" layoutY="184.0" prefHeight="40.0" prefWidth="240.0" text="Nom de produit" textFill="WHITE">
+                     <font>
+                        <Font size="25.0" />
+                     </font>
+                  </Label>
+                  <JFXComboBox fx:id="domaine" layoutX="368.0" layoutY="185.0" onAction="#press_button" prefHeight="37.0" prefWidth="249.0" promptText=" Laptop" stylesheets="@acheteur.css" />
+                  <JFXComboBox fx:id="taille" layoutX="368.0" layoutY="354.0" prefHeight="37.0" prefWidth="249.0" promptText=" Taille d'ecran" stylesheets="@acheteur.css" />
+                  <JFXComboBox fx:id="version" layoutX="368.0" layoutY="296.0" prefHeight="37.0" prefWidth="249.0" promptText=" Version" stylesheets="@acheteur.css" />
+                  <JFXComboBox fx:id="marque" layoutX="368.0" layoutY="240.0" prefHeight="37.0" prefWidth="249.0" promptText=" Marque" stylesheets="@acheteur.css" />
+                  <JFXComboBox fx:id="technologie" layoutX="368.0" layoutY="410.0" prefHeight="37.0" prefWidth="249.0" promptText=" Technologie" stylesheets="@acheteur.css" />
+                  <JFXComboBox fx:id="ram" layoutX="368.0" layoutY="467.0" prefHeight="37.0" prefWidth="249.0" promptText=" Ram" stylesheets="@acheteur.css" />
+                  <JFXComboBox fx:id="stockage" layoutX="368.0" layoutY="523.0" prefHeight="37.0" prefWidth="249.0" promptText=" Stockage" stylesheets="@acheteur.css" />
+                  <JFXComboBox fx:id="batterie" layoutX="368.0" layoutY="583.0" prefHeight="37.0" prefWidth="249.0" promptText=" Batterie" stylesheets="@acheteur.css" />
+                  <JFXComboBox fx:id="prix" layoutX="368.0" layoutY="636.0" prefHeight="37.0" prefWidth="249.0" promptText=" Prix" stylesheets="@acheteur.css" />
+                  <TextArea fx:id="textArea" layoutX="683.0" layoutY="265.0" opacity="0.0" prefHeight="338.0" prefWidth="323.0" />
+                  <Label layoutX="773.0" layoutY="211.0" text="-- Résultats --" textFill="WHITE">
+                     <font>
+                        <Font size="21.0" />
+                     </font>
+                  </Label>
+                  <JFXButton id="btnmodify" layoutX="760.0" layoutY="635.0" onAction="#AddCommande" prefHeight="40.0" prefWidth="169.0" style="-fx-background-radius: 10; -fx-background-color: #ffc700;" text="Confirmer la commande" />
+                  <JFXButton id="btnmodify" layoutX="760.0" layoutY="689.0" onAction="#reset" prefHeight="40.0" prefWidth="169.0" style="-fx-background-radius: 10; -fx-background-color: #ffc700;" text="Reset " />
+                  <TextArea fx:id="textArea2" layoutX="760.0" layoutY="296.0" prefHeight="233.0" prefWidth="200.0" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
